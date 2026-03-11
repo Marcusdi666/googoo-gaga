@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import Battlefield from './components/Battlefield'
-import { GameState, CHARACTERS } from './types/game'
+import { type GameState, CHARACTERS } from './types/game'
 import './App.css'
 
 function App() {

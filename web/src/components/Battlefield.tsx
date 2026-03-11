@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react';
-import { GameEngine, Inputs } from '../engine/GameLoop';
-import { GameState, PlayerState, CHARACTERS } from '../types/game';
+import React, { useRef, useEffect, useMemo } from 'react';
+import { GameEngine, type Inputs } from '../engine/GameLoop';
+import { type GameState, CHARACTERS } from '../types/game';
 
 interface BattlefieldProps {
   onStateUpdate: (state: GameState) => void;

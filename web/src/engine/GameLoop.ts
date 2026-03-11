@@ -1,4 +1,4 @@
-import { GameState, Position } from '../types/game';
+import { type GameState, type Position } from '../types/game';
 
 export interface Inputs {
   up: boolean;
