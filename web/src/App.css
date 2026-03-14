@@ -24,9 +24,9 @@ body {
 
 .title {
   font-size: 5rem;
-  color: #FFE81F; /* Star Wars Yellow */
+  color: #FF8C00; /* Cat Orange */
   margin-bottom: 0.2rem;
-  text-shadow: 0 0 15px rgba(255, 232, 31, 0.5);
+  text-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
 }
 
 .subtitle {
@@ -96,9 +96,9 @@ body {
 }
 
 .start-btn:hover {
-  background: #FFE81F;
+  background: #FF8C00;
   color: black;
-  box-shadow: 0 0 20px rgba(255, 232, 31, 0.8);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
 }
 
 .battlefield-container {
