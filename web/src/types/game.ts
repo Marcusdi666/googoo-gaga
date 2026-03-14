@@ -6,7 +6,7 @@ export interface Position {
 export interface Character {
   id: string;
   name: string;
-  faction: 'rebels' | 'galactic_empire';
+  team: 'orange_cats' | 'grey_cats';
   color: string;
   speed: number;
   health: number;
@@ -18,8 +18,22 @@ export interface PlayerState {
   character: Character;
 }
 
+export type GameMode = 'flight' | 'friend';
+
+export interface ChairState {
+  id: string;
+  holder: 'player' | 'opponent' | 'none';
+  position: Position;
+  isFlying: boolean;
+  velocity?: { x: number; y: number };
+  throwCooldown?: number;
+}
+
 export interface GameState {
   player: PlayerState;
+  opponent: PlayerState;
+  chairs: ChairState[];
+  gameMode: GameMode;
   viewport: {
     width: number;
     height: number;
@@ -27,20 +41,20 @@ export interface GameState {
 }
 
 export const CHARACTERS: Record<string, Character> = {
-  yoda: {
-    id: 'yoda',
-    name: 'Yoda',
-    faction: 'rebels',
-    color: '#00FF00', // Green
-    speed: 7,
-    health: 120,
+  garfield: {
+    id: 'garfield',
+    name: 'Garfield',
+    team: 'orange_cats',
+    color: '#FF8C00', // DarkOrange
+    speed: 4,
+    health: 150,
   },
-  stormtrooper: {
-    id: 'stormtrooper',
-    name: 'Stormtrooper',
-    faction: 'galactic_empire',
-    color: '#FFFFFF', // White
-    speed: 5,
-    health: 100,
+  tom: {
+    id: 'tom',
+    name: 'Tom',
+    team: 'grey_cats',
+    color: '#808080', // Grey
+    speed: 6,
+    health: 120,
   },
 };
